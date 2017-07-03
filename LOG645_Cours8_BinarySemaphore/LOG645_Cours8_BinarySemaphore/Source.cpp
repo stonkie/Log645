@@ -36,8 +36,9 @@ pthread_t StartFileAccessThread()
 
 	pthread_create(&thread, nullptr, &CopyFile, parameters);
 
-	// sem_wait(&semaphore);
-	// sem_destroy(&semaphore);
+	// Qu'arrive-t'il sans la sémaphore?
+	sem_wait(&semaphore);
+	sem_destroy(&semaphore);
 
 	printf("Freeing ressources.\n");
 
