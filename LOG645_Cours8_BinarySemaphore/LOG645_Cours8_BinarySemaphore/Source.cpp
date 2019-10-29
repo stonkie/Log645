@@ -5,6 +5,7 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <thread>
+#include <valarray>
 
 pthread_t StartFileAccessThread();
 void *CopyFile(void *parameters);

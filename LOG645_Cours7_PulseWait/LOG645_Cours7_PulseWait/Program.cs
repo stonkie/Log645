@@ -18,18 +18,6 @@ namespace LOG645_Cours7_PulseWait
 
         private static void Main(string[] args)
         {
-            
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
-            StartConsumer();
             StartConsumer();
             StartConsumer();
             StartConsumer();
@@ -51,7 +39,7 @@ namespace LOG645_Cours7_PulseWait
                     {
                         Console.WriteLine($"     Producing job {jobId}");
                         Jobs.Enqueue(new SomeJob() {Id = jobId});
-                        Monitor.PulseAll(JobsLock);
+                        Monitor.Pulse(JobsLock);
                     }
                     Thread.Sleep(10);
                 }

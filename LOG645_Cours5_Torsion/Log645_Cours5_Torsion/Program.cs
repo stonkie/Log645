@@ -51,20 +51,20 @@ namespace Log645_Cours5_Torsion
         {
             var matrix = Enumerable.Range(0, maxX).Select(index => Enumerable.Repeat(0, maxY).ToArray()).ToArray();
 
-            for (int x = 0; x < maxX; x++)
-            {
-                for (int y = 0; y < maxY; y++)
-                {
-                    if (x == 0 || y == 0)
-                    {
-                        matrix[x][y] = 5;
-                    }
-                    else
-                    {
-                        matrix[x][y] = matrix[x - 1][y] + matrix[x][y - 1];
-                    }
-                }
-            }
+						for (int x = 0; x < maxX; x++)
+						{
+								for (int y = 0; y < maxY; y++)
+								{
+										if (x == 0 || y == 0)
+										{
+												matrix[x][y] = 5;
+										}
+										else
+										{
+												matrix[x][y] = matrix[x - 1][y] + matrix[x][y - 1];
+										}
+								}
+						}
 
             for (int x = 0; x < maxX; x++)
             {

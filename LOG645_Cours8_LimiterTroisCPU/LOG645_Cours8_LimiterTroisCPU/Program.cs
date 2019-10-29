@@ -20,7 +20,7 @@ namespace LOG645_Cours8_LimiterTroisCPU
                 int index = actionIndex;
                 threads.Add(pool.Run(() =>
                 {
-                    Thread.Sleep(100);
+                    Thread.Sleep(1000);
                     Console.WriteLine($"Thread {index} finished at {DateTime.Now.ToString("o")} .");
                 }));
             }

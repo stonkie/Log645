@@ -206,7 +206,7 @@ namespace LOG645_Cours8_ReadWriteLock
 
                     for (int blockIndex = startBlock; blockIndex <= endBlock; blockIndex++)
                     {
-                        _store.BlockLocks[blockIndex].EnterReadLock();
+                        _store.BlockLocks[blockIndex].EnterWriteLock();
                     }
 
                     Buffer.BlockCopy(buffer, 0, _store.Buffer, offset, count);
@@ -215,7 +215,7 @@ namespace LOG645_Cours8_ReadWriteLock
                 {
                     for (int blockIndex = startBlock; blockIndex <= endBlock; blockIndex++)
                     {
-                        _store.BlockLocks[blockIndex].ExitReadLock();
+                        _store.BlockLocks[blockIndex].ExitWriteLock();
                     }
 
                     _store.BufferLengthLock.ExitReadLock();

@@ -11,13 +11,14 @@ namespace LOG645_Cours5_DestructionDépendances
         {
             var count = 10000;
             int[] sum = new int[count];
+						double[] x = new double[count];
 
             for (var i = 0; i < count; i++)
             {
-                var x = random.NextDouble();
+                x[i] = random.NextDouble();
                 var y = random.NextDouble();
 
-                if (Math.Sqrt(x * x + y * y) <= 1.0)
+                if (Math.Sqrt(x[i] * x[i] + y * y) <= 1.0)
                     sum[i] = 1;
                 else
                 {
