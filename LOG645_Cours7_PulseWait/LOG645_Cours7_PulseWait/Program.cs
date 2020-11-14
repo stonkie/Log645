@@ -33,7 +33,7 @@ namespace LOG645_Cours7_PulseWait
         {
             var producerThread = new Thread(() =>
             {
-                for (int jobId = 0; jobId < 1000; jobId++)
+                for (int jobId = 0; jobId < 100; jobId++)
                 {
                     lock (JobsLock)
                     {
@@ -58,7 +58,7 @@ namespace LOG645_Cours7_PulseWait
 
                     lock (JobsLock)
                     {
-                        while (!Jobs.Any())
+                        while (Jobs.Count == 0)
                         {
                             Monitor.Wait(JobsLock);
                         }

@@ -2,7 +2,7 @@
 #include <cmath>
 #include <ctime>
 #include <omp.h>
-#include <semaphore.h>
+#include "semaphore.h"
 #include <thread>
 
 int main(int argc, char** argv)
