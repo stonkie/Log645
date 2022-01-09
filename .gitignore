@@ -1,5 +1,6 @@
 *.suo
 .vs/
+.idea/
 Debug/
 *.filters
 *.user
